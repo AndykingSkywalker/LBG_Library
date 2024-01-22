@@ -2,15 +2,10 @@ package library;
 
 public class App {
 	public static void main(String[] args) {
-
-//		ArrayList<Item> items = new ArrayList<>();
-//
-//		items.add(new Book("Harry Potter", "26-06-1997", 223, false));
-//		items.add(new Newspaper("Metro", "22-01-2024", 40, true));
+		// created new magazine and person
 		Magazine myMagazine = (new Magazine("Kerrang", "11-03-2012", 50, true));
 		Person myPerson = (new Person("Andrew", 27, "Horror"));
 
-//
 		System.out.println(myMagazine);
 		System.out.println(myPerson);
 
@@ -20,11 +15,10 @@ public class App {
 
 		myMagazine.setTitle("Hello");
 		myMagazine.checkingIn();
-		myPerson.setFavouriteGenre("Fantasy");
 
 		System.out.println(myMagazine);
 		System.out.println(myPerson);
-
+		// created new library
 		Library myLibrary = new Library();
 
 		myLibrary.addToLibrary(new Book("Harry Potter", "26-06-1997", 223, false));
@@ -37,9 +31,10 @@ public class App {
 		System.out.println("myLibrary: " + myLibrary);
 
 		myLibrary.removeFromLibrary(new Magazine("Kerrang", "11-03-2012", 50, true));
-		myLibrary.removePersonFromLibrary(new Person("ANdrew", 27, "Horror"));
+		myLibrary.removePersonFromLibrary(new Person("Andrew", 27, "Horror"));
 		myLibrary.removePersonById(1);
 		myLibrary.removeById(3);
+		myLibrary.checkoutById(2);
 
 		System.out.println("myLibrary: " + myLibrary);
 

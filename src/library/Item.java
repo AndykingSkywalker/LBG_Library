@@ -65,8 +65,8 @@ public abstract class Item implements Comparable<Item> {
 		return checkedIn;
 	}
 
-	public void setCheckedIn(boolean checkedIn) {
-		this.checkedIn = checkedIn;
+	public boolean setCheckedIn(boolean checkedIn) {
+		return this.checkedIn = checkedIn;
 	}
 
 	public boolean checkingOut() {

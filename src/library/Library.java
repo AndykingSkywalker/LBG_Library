@@ -26,6 +26,24 @@ public class Library {
 		return this.items.removeAll(toRemove);
 	}
 
+	public boolean checkInById(int id) {
+		for (Item item : this.items) {
+			if (item.getId() == id) {
+				return item.setCheckedIn(true);
+			}
+		}
+		return false;
+	}
+
+	public boolean checkoutById(int id) {
+		for (Item item : this.items) {
+			if (item.getId() == id) {
+				return item.setCheckedIn(false);
+			}
+		}
+		return true;
+	}
+
 	public void addPersonToLibrary(Person person) {
 		people.add(person);
 	}

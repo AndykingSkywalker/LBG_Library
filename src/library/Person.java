@@ -64,8 +64,13 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		// TODO Auto-generated method stub
-		return 0;
+		if (id < o.getId()) {
+			return +1;
+		} else if (id > o.getId()) {
+			return -1;
+		} else {
+			return 0;
+		}
 	}
 
 }
