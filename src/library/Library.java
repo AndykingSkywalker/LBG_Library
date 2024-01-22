@@ -6,6 +6,7 @@ import java.util.List;
 public class Library {
 
 	private ArrayList<Item> items = new ArrayList<>();
+	private ArrayList<Person> people = new ArrayList<>();
 
 	public void addToLibrary(Item item) {
 		items.add(item);
@@ -25,9 +26,27 @@ public class Library {
 		return this.items.removeAll(toRemove);
 	}
 
+	public void addPersonToLibrary(Person person) {
+		people.add(person);
+	}
+
+	public void removePersonFromLibrary(Person person) {
+		people.remove(person);
+	}
+
+	public boolean removePersonById(int id) {
+		List<Person> toRemove = new ArrayList<Person>();
+		for (Person person : this.people) {
+			if (person.getId() == id) {
+				toRemove.add(person);
+			}
+		}
+		return this.people.removeAll(toRemove);
+	}
+
 	@Override
 	public String toString() {
-		return "items=" + items + "]";
+		return "items=" + items + " people=" + people + "]";
 	}
 
 }
