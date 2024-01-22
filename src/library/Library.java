@@ -44,6 +44,18 @@ public class Library {
 		return true;
 	}
 
+	public boolean amendById(int id, String title, String dateOfPublishing, int numOfPages) {
+		for (Item item : this.items) {
+			if (item.getId() == id) {
+				item.setTitle(title);
+				item.setDateOfPublishing(dateOfPublishing);
+				item.setNumOfPages(numOfPages);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void addPersonToLibrary(Person person) {
 		people.add(person);
 	}

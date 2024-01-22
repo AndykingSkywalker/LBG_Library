@@ -35,6 +35,7 @@ public class App {
 		myLibrary.removePersonById(1);
 		myLibrary.removeById(3);
 		myLibrary.checkoutById(2);
+		myLibrary.amendById(2, "Dracula", "26-04-1897", 418);
 
 		System.out.println("myLibrary: " + myLibrary);
 
