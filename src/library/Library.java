@@ -56,6 +56,18 @@ public class Library {
 		return false;
 	}
 
+	public boolean amendPersonById(int id, String name, int age, String favouriteGenre) {
+		for (Person person : this.people) {
+			if (person.getId() == id) {
+				person.setName(name);
+				person.setAge(age);
+				person.setFavouriteGenre(favouriteGenre);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void addPersonToLibrary(Person person) {
 		people.add(person);
 	}
