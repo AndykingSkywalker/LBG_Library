@@ -8,9 +8,11 @@ public class App {
 //		items.add(new Book("Harry Potter", "26-06-1997", 223, false));
 //		items.add(new Newspaper("Metro", "22-01-2024", 40, true));
 		Magazine myMagazine = (new Magazine("Kerrang", "11-03-2012", 50, true));
+		Person myPerson = (new Person("Andrew", 27, "Horror"));
 
 //
 		System.out.println(myMagazine);
+		System.out.println(myPerson);
 
 		myMagazine.checkingOut();
 
@@ -18,8 +20,10 @@ public class App {
 
 		myMagazine.setTitle("Hello");
 		myMagazine.checkingIn();
+		myPerson.setFavouriteGenre("Fantasy");
 
 		System.out.println(myMagazine);
+		System.out.println(myPerson);
 
 		Library myLibrary = new Library();
 
