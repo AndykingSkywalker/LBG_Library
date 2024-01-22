@@ -10,11 +10,14 @@ public abstract class Item implements Comparable<Item> {
 
 	private int id;
 
+	private boolean checkedIn;
+
 	private static int count = 1;
 
 	public Item() {
 		super();
 		this.id = count++;
+		this.checkedIn = true;
 	}
 
 	public Item(String title, String dateOfPublishing, int numOfPages) {
@@ -23,6 +26,7 @@ public abstract class Item implements Comparable<Item> {
 		this.title = title;
 		this.dateOfPublishing = dateOfPublishing;
 		this.numOfPages = numOfPages;
+		this.checkedIn = true;
 	}
 
 	public String getTitle() {
@@ -57,10 +61,26 @@ public abstract class Item implements Comparable<Item> {
 		this.id = id;
 	}
 
+	public boolean isCheckedIn() {
+		return checkedIn;
+	}
+
+	public void setCheckedIn(boolean checkedIn) {
+		this.checkedIn = checkedIn;
+	}
+
+	public boolean checkingOut() {
+		return this.checkedIn = false;
+	}
+
+	public boolean checkingIn() {
+		return this.checkedIn = true;
+	}
+
 	@Override
 	public String toString() {
 		return "Item [title=" + title + ", dateOfPublishing=" + dateOfPublishing + ", numOfPages=" + numOfPages
-				+ ", id=" + id + "]";
+				+ ", id=" + id + ", checkedIn=" + checkedIn + "]";
 	}
 
 }
