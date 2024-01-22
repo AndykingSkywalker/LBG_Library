@@ -21,10 +21,4 @@ public class Magazine extends Item {
 		this.comesWithPoster = comesWithPoster;
 	}
 
-	@Override
-	public int compareTo(Item o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

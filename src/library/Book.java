@@ -21,10 +21,4 @@ public class Book extends Item {
 		this.hasPictures = hasPictures;
 	}
 
-	@Override
-	public int compareTo(Item o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

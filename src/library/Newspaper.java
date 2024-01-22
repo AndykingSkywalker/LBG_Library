@@ -21,10 +21,4 @@ public class Newspaper extends Item {
 		this.hasCrossword = hasCrossword;
 	}
 
-	@Override
-	public int compareTo(Item o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

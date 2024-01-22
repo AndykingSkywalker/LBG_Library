@@ -53,10 +53,6 @@ public class Person implements Comparable<Person> {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + ", favouriteGenre=" + favouriteGenre + ", id=" + id + "]";

@@ -2,22 +2,22 @@ package library;
 
 public class App {
 	public static void main(String[] args) {
-		// created new magazine and person
-		Magazine myMagazine = (new Magazine("Kerrang", "11-03-2012", 50, true));
-		Person myPerson = (new Person("Andrew", 27, "Horror"));
+		// early version of creating new magazine and person
+		/*
+		 * Magazine myMagazine = (new Magazine("Kerrang", "11-03-2012", 50, true));
+		 * Person myPerson = (new Person("Andrew", 27, "Horror"));
+		 * 
+		 * System.out.println(myMagazine); System.out.println(myPerson);
+		 * 
+		 * 
+		 * System.out.println(myMagazine);
+		 * 
+		 * myMagazine.setTitle("Hello"); myMagazine.checkingIn();
+		 * 
+		 * System.out.println(myMagazine); System.out.println(myPerson);
+		 * 
+		 */
 
-		System.out.println(myMagazine);
-		System.out.println(myPerson);
-
-		myMagazine.checkingOut();
-
-		System.out.println(myMagazine);
-
-		myMagazine.setTitle("Hello");
-		myMagazine.checkingIn();
-
-		System.out.println(myMagazine);
-		System.out.println(myPerson);
 		// created new library
 		Library myLibrary = new Library();
 
@@ -30,8 +30,6 @@ public class App {
 
 		System.out.println("myLibrary: " + myLibrary);
 
-		myLibrary.removeFromLibrary(new Magazine("Kerrang", "11-03-2012", 50, true));
-		myLibrary.removePersonFromLibrary(new Person("Andrew", 27, "Horror"));
 		myLibrary.removePersonById(1);
 		myLibrary.removeById(3);
 		myLibrary.checkoutById(2);

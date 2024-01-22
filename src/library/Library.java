@@ -1,7 +1,6 @@
 package library;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Library {
 
@@ -12,18 +11,14 @@ public class Library {
 		items.add(item);
 	}
 
-	public void removeFromLibrary(Item item) {
-		items.remove(item);
-	}
-
 	public boolean removeById(int id) {
-		List<Item> toRemove = new ArrayList<Item>();
 		for (Item item : this.items) {
 			if (item.getId() == id) {
-				toRemove.add(item);
+				this.items.remove(item);
+				return true;
 			}
 		}
-		return this.items.removeAll(toRemove);
+		return false;
 	}
 
 	public boolean checkInById(int id) {
@@ -72,18 +67,14 @@ public class Library {
 		people.add(person);
 	}
 
-	public void removePersonFromLibrary(Person person) {
-		people.remove(person);
-	}
-
 	public boolean removePersonById(int id) {
-		List<Person> toRemove = new ArrayList<Person>();
 		for (Person person : this.people) {
 			if (person.getId() == id) {
-				toRemove.add(person);
+				this.people.remove(person);
+				return true;
 			}
 		}
-		return this.people.removeAll(toRemove);
+		return false;
 	}
 
 	@Override

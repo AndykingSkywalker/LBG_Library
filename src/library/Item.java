@@ -1,6 +1,6 @@
 package library;
 
-public abstract class Item implements Comparable<Item> {
+public abstract class Item {
 
 	private String title;
 
@@ -57,24 +57,12 @@ public abstract class Item implements Comparable<Item> {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public boolean isCheckedIn() {
 		return checkedIn;
 	}
 
 	public boolean setCheckedIn(boolean checkedIn) {
 		return this.checkedIn = checkedIn;
-	}
-
-	public boolean checkingOut() {
-		return this.checkedIn = false;
-	}
-
-	public boolean checkingIn() {
-		return this.checkedIn = true;
 	}
 
 	@Override
